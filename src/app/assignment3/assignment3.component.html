@@ -1,0 +1,13 @@
+<hr>
+<ol>
+  <li>
+    <button (click)="toggleDetails()">Display details</button>
+  </li>
+  <li>
+    <p *ngIf="displayDetails">Some paragraph.</p>
+  </li>
+  <li>Done.</li>
+  <li>
+    <ol *ngFor="let click of clicks; let i = index" [ngStyle]="{fontWeight:i > 4 ? 'bold': 'none'}">{{click}}</ol>
+  </li>
+</ol>
